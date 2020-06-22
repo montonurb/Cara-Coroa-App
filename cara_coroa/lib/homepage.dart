@@ -10,9 +10,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   void _iniciar(){
-    var escolhas = ["cara", "coroa"];
-    var numero = Random().nextInt(escolhas.length);
-    var resultado = escolhas[numero];
+    var escolhas = ["cara", "coroa"];//criando uma lista para os resultados
+    var numero = Random().nextInt(escolhas.length);//fazendo com que numero receba um número aleatório conforme o tamanho da lista acima
+    var resultado = escolhas[numero];//resultado recebe qual item foi "sorteado".
     Navigator.push(context, MaterialPageRoute(builder: (context) => ResultadoScreen(resultado)));
   }
   @override
